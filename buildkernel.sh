@@ -86,7 +86,7 @@ build_kernel()
 		NCORES=8
 	fi
 	(cd ${OUT_DIR} && \
-	${MAKE_PATH}make ARCH=${ARCH} CROSS_COMPILE=${CROSS_COMPILE} HOSTCFLAGS="${TARGET_INCLUDES}" HOSTLDFLAGS="${TARGET_LINCLUDES}" O=${OUT_DIR} ${CC_ARG} ${MAKE_ARGS} -j${NCORES})
+	${MAKE_PATH}make ARCH=${ARCH} CROSS_COMPILE=/home/orges/proton/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin/aarch64-elf- HOSTCFLAGS="${TARGET_INCLUDES}" HOSTLDFLAGS="${TARGET_LINCLUDES}" O=${OUT_DIR} ${CC_ARG} ${MAKE_ARGS} -j${NCORES})
 	set +x
 }
 
